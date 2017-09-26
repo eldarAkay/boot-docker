@@ -1,0 +1,4 @@
+rootProject.name = 'boot-docker'
+include 'admin'
+include 'client'
+
