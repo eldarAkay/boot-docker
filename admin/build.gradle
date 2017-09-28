@@ -10,12 +10,11 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.4.RELEASE")
         classpath('se.transmode.gradle:gradle-docker:1.2')
-        classpath('com.moowork.gradle:gradle-node-plugin:1.1.1')
+        classpath('com.moowork.gradle:gradle-node-plugin:1.2.0')
     }
 }
 
 group = 'eldar'
-version 'unspecified'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -30,20 +29,20 @@ jar {
     version = '0.1.0'
 }
 
+//run - execute task
+// build - ng build (looks in package.json scripts)
 
 task buildAngular(type: NpmTask, dependsOn: 'npmInstall') {
-    group = 'build'
-    description = "Compile angular folder"
     args = ['run', 'build']
 }
 
 
 build.dependsOn(buildAngular)
 
-bootRun.dependsOn(buildAngular)
-
-
 node {
+    version = '7.10.0'
+    npmVersion = '4.2.0'
+    download = true
     nodeModulesDir = file("../admin-angular")
 }
 
