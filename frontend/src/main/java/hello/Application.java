@@ -5,14 +5,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @SpringBootApplication
 @RestController
-@RequestMapping(path = "/api")
+@RequestMapping("/api")
+
 public class Application {
 
     @RequestMapping("/test")
     public String home() {
-        return "admin side is working on port 9001";
+        return "The frontend side is running on port 9002";
     }
 
     public static void main(String[] args) {
