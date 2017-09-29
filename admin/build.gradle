@@ -29,9 +29,6 @@ jar {
     version = '0.1.0'
 }
 
-//run - execute task
-// build - ng build (looks in package.json scripts)
-
 task buildAngular(type: NpmTask, dependsOn: 'npmInstall') {
     args = ['run', 'build']
 }
