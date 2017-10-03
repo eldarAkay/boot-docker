@@ -7,7 +7,7 @@ import {Http} from "@angular/http";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'admin side works';
+  title = 'Angular app works!';
   result = '';
 
   constructor(private http: Http){
