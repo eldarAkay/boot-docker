@@ -1,4 +1,3 @@
 rootProject.name = 'boot-docker'
 include 'admin'
-include 'frontend'
-
+include 'admin-angular'

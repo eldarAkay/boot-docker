@@ -7,7 +7,7 @@ import {Http} from "@angular/http";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular app works!';
+  title = 'Spring boot and Angular with webjars!';
   result = '';
 
   constructor(private http: Http){
