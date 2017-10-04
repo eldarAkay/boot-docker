@@ -12,7 +12,7 @@ public class Application {
 
     @RequestMapping("/test")
     public String home() {
-        return "admin side is working on port 9001";
+        return "App works";
     }
 
     public static void main(String[] args) {
